@@ -22,9 +22,9 @@
     },
     "runArgs": [
         "--network=host",
-        "--env-file=.env",
+        //"--env-file=.env",
         //"--device=/dev/bus/usb/001/003:/dev/bus/usb/001/003"
-        "--device=/dev/bus/usb"
+        //"--device=/dev/bus/usb"
     ],
     "postCreateCommand": "poetry install && poetry run pre-commit install"
 }
