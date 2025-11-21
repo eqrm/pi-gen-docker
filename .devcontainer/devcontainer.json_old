@@ -1,0 +1,30 @@
+{
+    "build": {
+        "context": "..",
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.autopep8",
+                "ms-azuretools.vscode-docker",
+                "zeshuaro.vscode-python-poetry",
+                "redhat.vscode-yaml",
+                "tamasfe.even-better-toml",
+                "zxh404.vscode-proto3",
+                "LittleFoxTeam.vscode-python-test-adapter",
+                "charliermarsh.ruff",
+                "nickmillerdev.pytest-fixtures"
+            ]
+        }
+    },
+    "runArgs": [
+        "--network=host",
+        //"--env-file=.env",
+        //"--device=/dev/bus/usb/001/003:/dev/bus/usb/001/003"
+        //"--device=/dev/bus/usb"
+    ],
+    "postCreateCommand": "poetry install && poetry run pre-commit install"
+}
